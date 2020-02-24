@@ -1,48 +1,54 @@
-#!/usr/bin/env python
+# The MIT License (MIT)
+#
+# Copyright (c) 2020, Fevzi Anifieiev
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-"""The setup script."""
 
 from setuptools import setup, find_packages
-
-with open('README.rst') as readme_file:
-    readme = readme_file.read()
-
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
-
-requirements = [ ]
-
-setup_requirements = ['pytest-runner', ]
-
-test_requirements = ['pytest>=3', ]
+import aibolit
 
 setup(
-    author="Fevzi Anifieiev",
-    author_email='fevzi.anifyeyev@gmail.com',
-    python_requires='>=3.5',
+    name='aibolit',
+    version=aibolit.__version__,
+    description=aibolit.__doc__.strip(),
+    long_description='Defect Detection with Machine Learning in Mind',
+    url='https://github.com/yegor256/aibolit',
+    download_url='https://github.com/yegor256/aibolit',
+    author=aibolit.__author__,
+    author_email='yegor256@gmail.com',
+    license=aibolit.__licence__,
+    packages=find_packages(),
+    entry_points={
+        'console_scripts': [
+            'aibolit = aibolit.__main__:main'
+        ],
+    },
+    extras_require={},
+    install_requires=[],
+    tests_require=[],
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Programming Language :: Python',
+        'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        'Topic :: Software Development',
+        'Topic :: Utilities'
     ],
-    description="Python Elegant Primitives",
-    install_requires=requirements,
-    license="MIT license",
-    long_description=readme + '\n\n' + history,
-    include_package_data=True,
-    keywords='pyeo',
-    name='pyeo',
-    packages=find_packages(include=['pyeo', 'pyeo.*']),
-    setup_requires=setup_requirements,
-    test_suite='tests',
-    tests_require=test_requirements,
-    url='https://github.com/fanifieiev/pyeo',
-    version='0.1.0',
-    zip_safe=False,
 )
