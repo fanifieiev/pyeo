@@ -22,24 +22,19 @@
 
 
 from setuptools import setup, find_packages
-import aibolit
+import pyeo
 
 setup(
-    name='aibolit',
+    name='pyeo',
     version=aibolit.__version__,
     description=aibolit.__doc__.strip(),
-    long_description='Defect Detection with Machine Learning in Mind',
-    url='https://github.com/yegor256/aibolit',
-    download_url='https://github.com/yegor256/aibolit',
+    long_description='Python elegant prmitives',
+    url='https://github.com/fanifieiev/pyeo',
+    download_url='https://github.com/fanifieiev/pyeo',
     author=aibolit.__author__,
-    author_email='yegor256@gmail.com',
-    license=aibolit.__licence__,
-    packages=find_packages(),
-    entry_points={
-        'console_scripts': [
-            'aibolit = aibolit.__main__:main'
-        ],
-    },
+    author_email='fevzi.anifyeyev@gmail.com',
+    license=pyeo.__licence__,
+    packages=find_packages(),    
     extras_require={},
     install_requires=[],
     tests_require=[],
