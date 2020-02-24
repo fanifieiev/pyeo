@@ -5,7 +5,7 @@ from pyeo.scalar.numeric import SumOf
 
 
 def test_mapping_with_lambda():
-    scalar: Scalar[str] = Mapped[int, str](
+    scalar = Mapped[int, str](
         lambda num: str(num),
         SumOf([1, 2, 3, 4, 5])
     )
@@ -16,7 +16,7 @@ def test_mapping_with_func_method():
     def convert(num: int) -> str:
         return str(num)
 
-    scalar: Scalar[str] = Mapped[int, str](
+    scalar = Mapped[int, str](
         convert,
         SumOf([1, 2, 3, 4, 5])
     )
