@@ -26,12 +26,12 @@ import pyeo
 
 setup(
     name='pyeo',
-    version=aibolit.__version__,
-    description=aibolit.__doc__.strip(),
+    version=pyeo.__version__,
+    description=pyeo.__doc__.strip(),
     long_description='Python elegant prmitives',
     url='https://github.com/fanifieiev/pyeo',
     download_url='https://github.com/fanifieiev/pyeo',
-    author=aibolit.__author__,
+    author=pyeo.__author__,
     author_email='fevzi.anifyeyev@gmail.com',
     license=pyeo.__licence__,
     packages=find_packages(),    
