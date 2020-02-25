@@ -22,6 +22,7 @@
 
 
 from setuptools import setup, find_packages
+
 import pyeo
 
 setup(
@@ -34,7 +35,7 @@ setup(
     author=pyeo.__author__,
     author_email='fevzi.anifyeyev@gmail.com',
     license=pyeo.__licence__,
-    packages=find_packages(),    
+    packages=find_packages(),
     extras_require={},
     install_requires=[],
     tests_require=[],
